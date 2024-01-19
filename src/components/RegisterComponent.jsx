@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RegisterAPI } from "../api/AuthAPI";
 import { postUserData } from "../api/FirestoreAPI";
-import LinkedinLogo from "../assets/linkedinLogo.png";
+import LinkedinLogo from "../../public/linkedinLogo.png";
 import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/LoginComponent.scss";
@@ -66,8 +66,8 @@ export default function RegisterComponent() {
           Agree & Join
         </button>
       </div>
-      
-      <hr class="hr-text" data-content="or" />
+
+      <hr className="hr-text" data-content="or" />
 
       <div className="google-btn-container">
         <p className="go-to-signup">

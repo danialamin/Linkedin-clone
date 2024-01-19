@@ -15,6 +15,7 @@ export default function LoginComponent() {
     try {
       let res = await LoginAPI(credentials.email, credentials.password)
       toast.success('signed in to linkedin')
+      localStorage.setItem('userEmail', res.user.email)
       navigate("/home")
     } catch(err) {
       console.log(err.errors)
