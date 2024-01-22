@@ -1,10 +1,11 @@
 import React from 'react'
 import PostStatus from './common/PostUpdate'
 
-export default function HomeComponent() {
+// eslint-disable-next-line react/prop-types
+export default function HomeComponent({currentUser}) {
   return (
     <div className='home-component'>
-      <PostStatus />
+      <PostStatus currentUser={currentUser}/>
     </div>
   )
 }
