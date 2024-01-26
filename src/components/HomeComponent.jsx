@@ -1,11 +1,12 @@
-import React from 'react'
-import PostStatus from './common/PostUpdate'
+/* eslint-disable react/prop-types */
+import React from "react";
+import "../Sass/HomeComponent.scss";
+import PostStatus from "./common/PostUpdate";
 
-// eslint-disable-next-line react/prop-types
-export default function HomeComponent({currentUser}) {
+export default function HomeComponent({ currentUser }) {
   return (
-    <div className='home-component'>
-      <PostStatus currentUser={currentUser}/>
+    <div className="home-component">
+      <PostStatus currentUser={currentUser} />
     </div>
-  )
+  );
 }

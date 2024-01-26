@@ -1,24 +1,22 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react'
-import ProfileComponent from "../components/ProfileComponent"
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../firebaseConfig'
-import { useNavigate } from "react-router-dom"
-import Loader from '../components/common/Loader'
-
+import React, { useEffect, useState } from "react";
+import ProfileComponent from "../components/ProfileComponent";
+import { onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebaseConfig";
+import Loader from "../components/common/Loader";
 
 export default function Profile({ currentUser }) {
-  const [loading, setLoading] = React.useState(false)
-  let navigate = useNavigate()
+  const [loading, setLoading] = useState(true);
+  let navigate = useNavigate();
   useEffect(() => {
     onAuthStateChanged(auth, (res) => {
-      if (res?.accessToken) {
-        navigate("/")
+      if (!res?.accessToken) {
+        navigate("/");
       } else {
-        setLoading(false)
-    }})
-  }, [])
-  return (
-    loading ? <Loader /> :<ProfileComponent currentUser={currentUser} />
-  )
+        setLoading(false);
+      }
+    });
+  }, []);
+  return loading ? <Loader /> : <ProfileComponent currentUser={currentUser} />;
 }
