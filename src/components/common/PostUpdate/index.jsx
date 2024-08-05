@@ -4,7 +4,7 @@ import { postStatus, getStatus, updatePost } from "../../../api/FirestoreAPI";
 import { getCurrentTimeStamp } from "../../../helpers/useMoment";
 import ModalComponent from "../Modal";
 import { uploadPostImage } from "../../../api/ImageUpload";
-import { getUniqueID } from "../../../helpers/getUniqueId";
+import {getUniqueID} from "../../../helpers/getUniqueID";
 import PostsCard from "../PostsCard";
 import "./index.scss";
 

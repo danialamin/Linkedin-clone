@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import Connections from "../Pages/Connections";
+import Connections from "../pages/Connections";
 import { getCurrentUser } from "../api/FirestoreAPI";
 import Topbar from "../components/common/Topbar";
 

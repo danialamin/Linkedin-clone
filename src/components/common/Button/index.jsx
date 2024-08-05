@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import "./index.css"
+import "./index.scss"
 
 export default function Button({title, onClick}) {
   return (

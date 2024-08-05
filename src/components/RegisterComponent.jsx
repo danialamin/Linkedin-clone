@@ -3,7 +3,7 @@ import { RegisterAPI } from "../api/AuthAPI";
 import { postUserData } from "../api/FirestoreAPI";
 import LinkedinLogo from "../assets/linkedinLogo.png";
 import { useNavigate } from "react-router-dom";
-import { getUniqueID } from "../helpers/getUniqueId";
+import { getUniqueID } from "../helpers/getUniqueID";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
 

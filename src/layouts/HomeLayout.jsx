@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import Home from "../Pages/Home";
+import Home from "../pages/Home";
 import { getCurrentUser } from "../api/FirestoreAPI";
 import Topbar from "../components/common/Topbar";
 
